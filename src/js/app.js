@@ -42,7 +42,12 @@ function render(variables = {}) {
           <h3>${variables.city ? variables.city : "Ciudad"}, ${
     variables.country ? variables.country : "País"
   }</h3>
-          <ul class="position-right">
+  <ul class="${
+    variables.socialMediaPosition == "position-right"
+      ? "position-right"
+      : "position-left"
+  }">
+   
             <li><a href=${
               variables.twitter ? variables.twitter : "Twitter"
             }><i class="fab fa-twitter"></i></a></li>
@@ -56,6 +61,7 @@ function render(variables = {}) {
               variables.instagram ? variables.instagram : "Instagram"
             }><i class="fab fa-instagram"></i></a></li>
           </ul>
+          
         </div>
     `;
 }
