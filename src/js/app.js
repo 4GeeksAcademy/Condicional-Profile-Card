@@ -48,21 +48,28 @@ function render(variables = {}) {
       : "position-left"
   }">
    
-            <li><a href=${
-              variables.twitter ? variables.twitter : "Twitter"
-            }><i class="fab fa-twitter"></i></a></li>
-            <li><a href=${
-              variables.github ? variables.github : "Github"
-            }><i class="fab fa-github"></i></a></li>
-            <li><a href=${
-              variables.linkedin ? variables.linkedin : "Linkedin"
-            }><i class="fab fa-linkedin"></i></a></li>
-            <li><a href=${
-              variables.instagram ? variables.instagram : "Instagram"
-            }><i class="fab fa-instagram"></i></a></li>
-          </ul>
-          
-        </div>
+          <li><a href='${
+            variables.twitter
+              ? `https://twitter.com/${variables.twitter}`
+              : `https://www.twitter.com`
+          }'><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href='${
+            variables.github
+              ? `https://github.com/${variables.github}`
+              : `https://www.github.com`
+          }'><i class="fab fa-github"></i></a></li>
+          <li><a href='${
+            variables.linkedin
+              ? `https://linkedin.com/${variables.linkedin}`
+              : `https://www.linkedin.com`
+          }'><i class="fab fa-linkedin"></i></a></li>
+          <li><a href='${
+            variables.instagram
+              ? `https://instagram.com/${variables.instagram}`
+              : `https://www.instagram.com`
+          }'><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
     `;
 }
 
